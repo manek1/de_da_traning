@@ -1,10 +1,6 @@
 use company
 
-ALTER TABLE dbo.DateInfo
-ALTER COLUMN month_and_fy_name varchar(8);
-
-
-CREATE TABLE DateInfo (
+CREATE TABLE date_dim (
     date_key datetime,
     Bank_Holiday_CY int,
     Bank_Holiday_UK int,
@@ -36,7 +32,7 @@ CREATE TABLE DateInfo (
     fq_name varchar(10),
     fy_name varchar(10),
     julian_counter int,
-    month_and_cy_name varchar(7),
+    month_and_cy_name varchar(8),
     month_and_fy_name varchar(8),
     month_name varchar(8),
     month_number int,
@@ -72,9 +68,9 @@ WITH DateSeries AS (
     UNION ALL
     SELECT date_key + 1
     FROM DateSeries
-    WHERE date_key + 1 <= '2050-01-30'
+    WHERE date_key + 1 <= '2050-12-31'
 )
-INSERT INTO DateInfo (
+INSERT INTO date_dim (
     date_key, Bank_Holiday_CY, Bank_Holiday_UK, CIGNA_Month_End, cq_and_cy_name, cq_name, cy_name, 
     date_key_REAL, day_cq_begin, day_cq_end, day_cy_begin, day_cy_end, day_fq_begin, day_fq_end, 
     day_fy_begin, day_fy_end, day_month_begin, day_month_end, day_name, day_number_in_cq, day_number_in_cy, 
@@ -152,7 +148,7 @@ SELECT
 FROM DateSeries
 OPTION (MAXRECURSION 0);
 
-select * from DateInfo 
+select * from date_dim 
 
-SELECT count(*) as No_of_Column FROM information_schema.columns WHERE table_name ='DateInfo ';
+SELECT count(*) as No_of_Column FROM information_schema.columns WHERE table_name ='date_dim ';
 
