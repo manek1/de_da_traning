@@ -17,7 +17,18 @@ vehicles=['Dio','Kia','Ford','G-wagon']
 print('Ash had a black '+vehicles[0]+' in Baramati'+' and Pramod a black '+vehicles[1]+'.'+'Currently the red '+vehicles[2]+' is a saviour!'+'But he does hope to get a '+vehicles[3]+'!')
 
 #3-4. G uest List:  If you could invite anyone, living or deceased, to dinner, who would you invite? Make a list that includes at least three people you’d like to invite to dinner  Then use your list to print a message to each person, inviting them to dinner
-guest_list=['Priyanka','Gandhiji','Hitler','Abdul Kalam''']
+guest_list=['Priyanka','Gandhiji','Hitler','Abdul Kalam']
 print('Hi '+guest_list[0]+','+guest_list[1]+','+guest_list[2]+' and '+guest_list[3]+'. I would love for you to visit my home! ')
 
 #3-5.  Changing Guest List: You just heard that one of your guests can’t make the dinner, so you need to send out a new set of invitations  You’ll have to think of someone else to invite
+print('Hi '+guest_list[0]+','+guest_list[1]+','+guest_list[2]+' and '+guest_list[3]+'.')
+print('Unfortunately, '+guest_list[2] +' is unable to come.')
+guest_list=['Gandhiji','Priyanka','Aish','Abdul Kalam']
+print('Hi '+guest_list[0]+','+guest_list[1]+','+guest_list[2]+','+guest_list[2]+' and '+guest_list[3]+'. I would love for you to visit my home! ')
+
+#3-6.  More Guests: You just found a bigger dinner table, so now more space is available  Think of three more guests to invite to dinner
+print('Guys I found a bigger table! ')
+guest_list.insert(0,'Sushmita')
+guest_list.insert(3,'Lara')
+guest_list.append('Manju')
+print('Hi '+guest_list[0]+','+guest_list[1]+','+guest_list[2]+','+guest_list[3]+','+guest_list[4]+','+guest_list[5]+' and '+guest_list[6]+'. I would love for you to visit my home! ')
