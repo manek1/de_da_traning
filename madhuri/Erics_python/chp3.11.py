@@ -4,7 +4,7 @@
 #the program
 
 # List of cities
-places=['New York','sydney','Paris','Tokyo','Cairo']
+places=['New York','London','Paris','Tokyo','Cairo']
 # Intentionally cause an IndexError by accessing an invalid index
 try:
     print("\nAccessing an invalid index (7):")
@@ -14,4 +14,4 @@ except IndexError as e:
 
     # Correcting the error by accessing a valid index
     print("\nNow accessing a valid index (2):")
-    print(places[2])  # This will work, since index 3 is valid (London)
+    print(places[2])  # This will work, since index 2 is valid (London)
