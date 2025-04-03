@@ -31,3 +31,5 @@ item='cow'
 if item not in items:
     print('The entered item is NOT present in the list')
 
+#
+
