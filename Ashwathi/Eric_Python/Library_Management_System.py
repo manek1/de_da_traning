@@ -12,6 +12,28 @@ This will have the Book class with:
 	•	is_available(): to check if copies are available
 '''
 class Book():
-    def __init__(self,title, author, ISBN, available copies):
-        self.title = title
-        self.author = author
+    def __init__(self,title, author, ISBN, available_copies):
+        self.title=title
+        self.author=author
+        self.ISBN=ISBN
+        self.available_copies=available_copies
+
+    def display_info(self):
+        print("The details of the book are as follows:  "+self.title+'\n'+self.author+'\n'+self.ISBN+'\n')
+
+    def is_available(self):
+        if int(self.available_copies) > 0:
+            print('We do have copies of the book '+self.title+' available.')
+        else:
+            print("Sorry! There are  no copies available currently")
+
+my_book=Book('Wings of Fire','APJ Kalam Sir','123','5')
+my_book.display_info()
+my_book.is_available()
+
+
+
+
+
+
+
