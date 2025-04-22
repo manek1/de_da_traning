@@ -154,12 +154,140 @@ these flavors. Create an instance of IceCreamStand, and call this method.'''
 class IceCreamStand(Restaurant):
     def __init__(self,restaurant_name,cuisine_type):
         super().__init__(restaurant_name,cuisine_type)
-        self.flavours='Chocolate'
+        self.flavours=['Chocolate','Vanilla','Pista']
     def display_flavours(self):
-        print("The icecream stand has the flavour: "+self.flavours+". It is really yum!")
+       for i in self.flavours:
+            print("The icecream stand has the flavour: "+i+". It is really yum!")
 
-amul= IceCreamStand('Amul','Italian')
+amul=IceCreamStand('Amul','Dessert')
 amul.display_flavours()
+
+'''9-7. Admin: An administrator is a special kind of user. Write a class called 
+Admin that inherits from the User class you wrote in Exercise 9-3 (page 166) 
+or Exercise 9-5 (page 171). Add an attribute, privileges, that stores a list 
+of strings like "can add post", "can delete post", "can ban user", and so on.
+Write a method called show_privileges() that lists the administrator’s set of 
+privileges. Create an instance of Admin, and call your method.'''
+
+class Admin(User):
+    def __init__(self,first_name,last_name,dob,gender,login_attempts):
+        super().__init__(first_name,last_name,dob,gender,login_attempts)
+        self.privileges=['can add post','can delete post','can ban user']
+    def show_privileges(self):
+        for i in self.privileges:
+            print('The admin can '+i)
+a1=Admin('Joy','Clooney','220198','M','0')
+a1.show_privileges()
+
+'''9-8. Privileges: Write a separate Privileges class. The class should have one 
+attribute, privileges, that stores a list of strings as described in Exercise 9-7.
+Move the show_privileges() method to this class. Make a Privileges instance 
+as an attribute in the Admin class. Create a new instance of Admin and use your 
+method to show its privileges.'''
+
+class Privileges():
+    def __init__(self):
+        self.privileges=['can add post','can delete post','can ban user']
+    def show_privileges(self):
+        for i in self.privileges:
+            print('This is the method from the Privileges class. The admin can '+i)
+
+class Admin(User):
+    def __init__(self,first_name,last_name,dob,gender,login_attempts):
+        super().__init__(first_name,last_name,dob,gender,login_attempts)
+        #Privileges instance as an attribute in the Admin class
+        self.privileges=Privileges()
+    def show_privileges(self):
+        for i in self.privileges:
+            print('The admin can '+i)
+a1=Admin('Joy','Clooney','220198','M','0')
+#a1.show_privileges()
+#new instance of Admin
+a2=Admin('Roy','Nomad','220394','M',0)
+#use your method to show its privileges.
+a2.privileges.show_privileges()
+
+'''9-9. Battery Upgrade: Use the final version of electric_car.py from this section.
+Add a method to the Battery class called upgrade_battery(). This method 
+should check the battery size and set the capacity to 85 if it isn’t already.
+Make an electric car with a default battery size, call get_range() once, and 
+then call get_range() a second time after upgrading the battery. You should 
+see an increase in the car’s range.'''
+
+
+class Car():
+    def __init__(self, make, model, year):
+        self.make = make
+        self.model = model
+        self.year = year
+        self.odometer_reading = 0
+
+    def get_descriptive_name(self):
+        long_name = str(self.year) + ' ' + self.make + ' ' + self.model
+        return long_name.title()
+
+
+class Battery():
+    """A simple attempt to model a battery for an electric car."""
+    def __init__(self, battery_size=70):
+        """Initialize the battery's attributes."""
+        self.battery_size = battery_size
+
+    def describe_battery(self):
+        """Print a statement describing the battery size."""
+        print("This car has a " + str(self.battery_size) + "-kWh battery.")
+
+    def upgrade_battery(self):
+        if self.battery_size ==85:
+            print("The battery size is already 85")
+        else:
+            self.battery_size = 85
+            print("The battery size has been set to 85")
+    def get_range(self):
+     #"""Print a statement about the range this battery provides."""
+        if self.battery_size == 70:
+            range = 240
+            print("The battery of size 70 provides a range of 240")
+        elif self.battery_size == 85:
+            range = 270
+            print("The battery of size 85 provides a range of 270")
+
+
+    message = "This car can go approximately " + str(range)
+    message += " miles on a full charge."
+    print(message)
+
+
+class ElectricCar(Car):
+    def __init__(self, make, model, year):
+        """
+        Initialize attributes of the parent class.
+        Then initialize attributes specific to an electric car.
+        """
+        super().__init__(make, model, year)
+        self.battery = Battery()
+
+
+my_tesla = ElectricCar('tesla', 'model s', 2016)
+my_tesla.battery.get_range()
+my_tesla.battery.upgrade_battery()
+my_tesla.battery.get_range()
+
+'''9-13. OrderedDict Rewrite: Start with Exercise 6-4 (page 108), where you 
+used a standard dictionary to represent a glossary. Rewrite the program using 
+the OrderedDict class and make sure the order of the output matches the order 
+in which key-value pairs were added to the dictionary.'''
+
+
+'''3 exercises pending. These can be attempted after finishing Chap 6 '''
+
+
+
+
+
+
+
+
 
 
 
