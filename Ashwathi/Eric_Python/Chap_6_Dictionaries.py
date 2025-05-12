@@ -69,6 +69,102 @@ some names that are already in the dictionary and some that are not.
 already taken the poll, print a message thanking them for responding.
 If they have not yet taken the poll, print a message inviting them to take 
 the poll.'''
+favorite_languages = {
+ 'jen': 'python',
+ 'sarah': 'c',
+ 'edward': 'ruby',
+ 'phil': 'python',
+ }
+people_to_take_poll=['jen','max','sarah','edward','pluto']
+
+print('\nThis is solution for 6-6 ')
+for people in people_to_take_poll:
+    if people in favorite_languages.keys():
+        print(people.title()+' has already taken the poll.')
+    else:
+        print(people.title()+', please take the poll.')
+
+'''6-7. People: Start with the program you wrote for Exercise 6-1 (page 102).
+Make two new dictionaries representing different people, and store all three 
+dictionaries in a list called people. Loop through your list of people. As you 
+loop through the list, print everything you know about each person.'''
+
+print("========================================================================")
+person1={'first_name':'Ashwathi','last_name':'Nair','age':'28','city':'Dubai'}
+person2={'first_name':'Ashwin','last_name':'Nair','age':'30','city':'Pune'}
+person3={'first_name':'Natasha','last_name':'Nambiar','age':'30','city':'Chennai'}
+people=[person1,person2,person3]
+
+for person in people:
+    print("The name of the person is "+person['first_name'].title()+" "+person['last_name'].title()+'.')
+    print("The age is "+person['age']+", and they stay in "+person['city']+'.')
+    print("-------------")
+
+'''6-8. Pets: Make several dictionaries, where the name of each dictionary is the 
+name of a pet. In each dictionary, include the kind of animal and the owner’s 
+name. Store these dictionaries in a list called pets. Next, loop through your list 
+and as you do print everything you know about each pet.'''
+
+marcus={'Kind_of_animal':'Monkey','Owner_Name':'Ross'}
+scooby={'Kind_of_animal':'Dog','Owner_Name':'Richie'}
+kitty={'Kind_of_animal':'Cat','Owner_Name':'Phoebe'}
+
+pets=[marcus,scooby,kitty]
+
+for pet in pets:
+    print("----------------")
+    print("This pet is a "+pet['Kind_of_animal']+". It belongs to "+pet['Owner_Name']+".")
+
+'''6-9. Favorite Places: Make a dictionary called favorite_places. Think of three 
+names to use as keys in the dictionary, and store one to three favorite places 
+for each person. To make this exercise a bit more interesting, ask some friends 
+to name a few of their favorite places. Loop through the dictionary, and print 
+each person’s name and their favorite places'''
+
+favorite_places={'Pramod':['London','France','Peru'] , 'Avantika':['Leh','Bahamas','Switzerland'] ,'Subha':['Palakkad','Ooty','Kedarnath'] }
+print("Below is a list of people and their favorite places to visit")
+for person,places in favorite_places.items():
+    print("The favourite places of "+person+" are: ")
+    for place in places:
+        print("\t"+place)
+
+'''6-10. Favorite Numbers: Modify your program from Exercise 6-2 (page 102) so 
+each person can have more than one favorite number. Then print each person’s 
+name along with their favorite numbers.'''
+
+fav_no={'Ash':[9,10,28],'Pra':[369,936,639],'Bob':[7,9,8],'Kian':[78,96,14]}
+
+print("This is a list of people along with their fav numbers")
+
+for person,numbers in fav_no.items():
+    print("----------------------------")
+    print("The fav numbers of "+person+" are :")
+    for number in numbers:
+        print(number)
+
+'''6-11. Cities: Make a dictionary called cities. Use the names of three cities as 
+keys in your dictionary. Create a dictionary of information about each city and 
+include the country that the city is in, its approximate population, and one fact 
+about that city. The keys for each city’s dictionary should be something like 
+country, population, and fact. Print the name of each city and all of the information you have stored about it.'''
+
+Cities={'Jodhpur':{'Country':'India','Population':'1.4 billion','Fact':'It is known as the blue city'}
+    ,'Kannur':{'Country':'India','Population':'1.4 billion','Fact':'It is known for Theyyam'}
+    ,'Dubai':{'Country':'UAE','Population':'10.4 million','Fact':'It is famous for Burj Khalifa'} }
+
+for city,info in Cities.items():
+    print("----------------------------")
+    print("Please find below the details for the city : "+city.title())
+    print("The city is part of "+info['Country']+'. It has a population of '+info['Population']
+          +'.'+info['Fact']+'.')
+
+'''6-12. Extensions: We’re now working with examples that are complex enough 
+that they can be extended in any number of ways. 
+Use one of the example programs from this chapter, and extend it 
+by adding new keys and values, changing the context of the program or 
+improving the formatting of the output.'''
+
+print("\n Ex 6-12: Not attempted this one as the exercises have already been attempted to have a standard formatting. ")
 
 
 
