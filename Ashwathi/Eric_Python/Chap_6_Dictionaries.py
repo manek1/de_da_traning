@@ -146,7 +146,7 @@ for person,numbers in fav_no.items():
 keys in your dictionary. Create a dictionary of information about each city and 
 include the country that the city is in, its approximate population, and one fact 
 about that city. The keys for each city’s dictionary should be something like 
-country, population, and fact. Print the name of each city and all of the information you have stored about it.'''
+country, population, and fact. Print the name of each city and all of the information you have stored about it.'''
 
 Cities={'Jodhpur':{'Country':'India','Population':'1.4 billion','Fact':'It is known as the blue city'}
     ,'Kannur':{'Country':'India','Population':'1.4 billion','Fact':'It is known for Theyyam'}
