@@ -18,10 +18,51 @@ else:
 
 '''7-3. Multiples of Ten: Ask the user for a number, and then report whether the 
 number is a multiple of 10 or not.'''
-
+'''
 user_number=input("Please enter a number of your choice and I will tell if its a multiple of 10. Your number =  ")
 user_number=int(user_number)
 if user_number%10 ==0:
     print("The number you have entered "+str(user_number)+" is a multiple of 10.")
 else:
     print("The number you have entered " + str(user_number) + " is NOT a multiple of 10.")
+'''
+'''7-4. Pizza Toppings: Write a loop that prompts the user to enter a series of 
+pizza toppings until they enter a 'quit' value. As they enter each topping, 
+print a message saying you’ll add that topping to their pizza.'''
+'''
+prompt = "Please enter your choice of topping: "
+prompt+="\n Enter 'quit' when you are finished."
+while True:
+    topping=input(prompt)
+    if topping=='quit':
+        break
+    else:
+        print("I will add the topping :"+topping+" to your Pizza!")
+'''
+'''7-5. Movie Tickets: A movie theater charges different ticket prices depending on 
+a person’s age. If a person is under the age of 3, the ticket is free; if they are 
+between 3 and 12, the ticket is $10; and if they are over age 12, the ticket is 
+$15. Write a loop in which you ask users their age, and then tell them the cost 
+of their movie ticket.'''
+
+prompt="Enter your age and I shall tell the movie fare. "
+prompt+="\nEnter 'quit' to exit."
+
+while True:
+    person_age=input(prompt)
+
+    if (prompt=='quit'):
+        break
+    elif (int(person_age)<3):
+        print("Your age is less than 3 so the ticket is free.")
+    elif (3<=int(person_age)<=12):
+        print("Your age is in the range 3-12, so the ticket price  is 10.")
+    elif (12<int(person_age)):
+        print("Your age is greater than 12,so the ticket price  is 15.")
+
+'''7-6. Three Exits: Write different versions of either Exercise 7-4 or Exercise 7-5 
+that do each of the following at least once:
+•	 Use a conditional test in the while statement to stop the loop.
+•	 Use an active variable to control how long the loop runs.
+•	 Use a break statement to exit the loop when the user enters a 'quit' value'''
+
