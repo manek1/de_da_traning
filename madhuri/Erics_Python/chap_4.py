@@ -23,7 +23,7 @@ for pizza in pizzas:
 # Add a statement outside the loop about how much you like pizza
 print("I really love pizza!")
 
---------------------------------------------------------------------------------------
+#--------------------------------------------------------------------------------------
 #4-2. Animals: Think of at least three different animals that have a common characteristic.
 #Store the names of these animals in a list, and then use a for loop to
 #print out the name of each animal.
@@ -44,14 +44,14 @@ for animal in animals:
  # add sentence
 print("\n Any of these animals would make a great pet!")
 
---------------------------------------------------------------------------------------
+#--------------------------------------------------------------------------------------
 #4-3. Counting to Twenty: Use a for loop to print the numbers from 1 to 20,
 #inclusive.
 
 for number in range(1,21):
     print(number)
 
---------------------------------------------------------------------------------------
+#--------------------------------------------------------------------------------------
 #4-4. One Million: Make a list of the numbers from one to one million, and then
 #use a for loop to print the numbers. (If the output is taking too long, stop it by
 #pressing ctrl-C or by closing the output window.
@@ -61,7 +61,7 @@ numbers=list(range(1,1000001))
 for number in numbers:
     print(number)
 
---------------------------------------------------------------------------------------
+#--------------------------------------------------------------------------------------
 #4-5. Summing a Million: Make a list of the numbers from one to one million,
 #and then use min() and max() to make sure your list actually starts at one and
 #ends at one million. Also, use the sum() function to see how quickly Python can
@@ -73,7 +73,7 @@ print("The minimum number is:",min(numbers))
 print("The maximum number is:",max(numbers))
 print("The sum of number is:",sum(numbers))
 
---------------------------------------------------------------------------------------
+#--------------------------------------------------------------------------------------
 #4-6. Odd Numbers: Use the third argument of the range() function to make a list
 #of the odd numbers from 1 to 20. Use a for loop to print each number.
 
@@ -81,7 +81,7 @@ odd_num=range(1,21,2)
 for number in odd_num:
     print(number)
 
---------------------------------------------------------------------------------------
+#--------------------------------------------------------------------------------------
 #4-7. Threes: Make a list of the multiples of 3 from 3 to 30. Use a for loop to
 #print the numbers in your list.
 
@@ -89,7 +89,7 @@ numbers=range(3,31,3)
 for num in numbers:
     print(num)
 
---------------------------------------------------------------------------------------
+#--------------------------------------------------------------------------------------
 #4-8. Cubes: A number raised to the third power is called a cube. For example,
 #the cube of 2 is written as 2**3 in Python. Make a list of the first 10 cubes (that
 #is, the cube of each integer from 1 through 10), and use a for loop to print out
@@ -101,7 +101,7 @@ cubes = [number**3 for number in range(1, 11)]
 for cube in cubes:
     print(cube)
 
---------------------------------------------------------------------------------------
+#--------------------------------------------------------------------------------------
 #4-9. Cube Comprehension: Use a list comprehension to generate a list of the
 #first 10 cubes.
 
@@ -110,7 +110,7 @@ cubes = [number**3 for number in range(1, 11)]
 # Use a list comprehension to generate a list of the first 10 cubes
 print(cubes)
 
---------------------------------------------------------------------------------------
+#--------------------------------------------------------------------------------------
 #4-10. Slices: Using one of the programs you wrote in this chapter, add several
 #lines to the end of the program that do the following:
 #• Print the message, The first three items in the list are:. Then use a slice to
@@ -133,7 +133,7 @@ print("Three items from the middle of the list are:", foods[middle_index-1:middl
 # Print the last three items in the list
 print("The last three items in the list are:", foods[-3:])
 
---------------------------------------------------------------------------------------
+#--------------------------------------------------------------------------------------
 #4-11. My Pizzas, Your Pizzas: Start with your program from Exercise 4-1
 #(page 60). Make a copy of the list of pizzas, and call it friend_pizzas.
 #Then, do the following:
@@ -163,7 +163,7 @@ print("My friend’s favorite pizzas are:")
 for pizza in friend_pizzas:
     print(pizza)
 
---------------------------------------------------------------------------------------
+#--------------------------------------------------------------------------------------
 #4-12. More Loops: All versions of foods.py in this section have avoided using
 #for loops when printing to save space. Choose a version of foods.py, and
 #write two for loops to print each list of foods.
@@ -179,7 +179,7 @@ print("\nMy friend's favorite foods are:")
 for food in friend_foods:
     print(food)
 
---------------------------------------------------------------------------------------
+#--------------------------------------------------------------------------------------
 #4-13. Buffet: A buffet-style restaurant offers only five basic foods. Think of five
 #simple foods, and store them in a tuple.
 #• Use a for loop to print each food the restaurant offers.
@@ -205,6 +205,3 @@ buffet = ("pasta", "salad", "fries", "cake", "rice")
 print("\nThe new restaurant menu is:")
 for food in buffet:
     print(food)
-
---------------------------------------------------------------------------------------
-

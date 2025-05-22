@@ -3,7 +3,7 @@
 name="my name is numesh"
 print (name)
 
---------------------------------------------------------------------------------------
+#--------------------------------------------------------------------------------------
 #2-2. Simple Messages: Store a message in a variable, and print that message.
      #Then change the value of your variable to a new message, and print the new message
 
@@ -13,7 +13,7 @@ print (country)
 country="bharat is my country"
 print (country)
 
---------------------------------------------------------------------------------------
+#--------------------------------------------------------------------------------------
 #2-3. Personal Message: Store a person’s name in a variable, and print a message
 #to that person. Your message should be simple, such as, “Hello Eric,
 #would you like to learn some Python today?”
@@ -23,7 +23,7 @@ message=f"hello {p_name},would you like to learn some Python today?"
 
 print(message)
 
---------------------------------------------------------------------------------------
+#--------------------------------------------------------------------------------------
 #2-4. Name Cases: Store a person’s name in a variable, and then print that person’s
 #name in lowercase, uppercase, and titlecase.
 
@@ -33,7 +33,7 @@ print(name.lower())
 print(name.upper())
 print(name.title())
 
---------------------------------------------------------------------------------------
+#--------------------------------------------------------------------------------------
 #2-5. Famous Quote: Find a quote from a famous person you admire. Print the
 #quote and the name of its author. Your output should look something like the
 #following, including the quotation marks:
@@ -45,7 +45,7 @@ quote='"A person who never made a mistake never tried anything new."'
 
 print(f'{author} once said,{quote}')
 
---------------------------------------------------------------------------------------
+#--------------------------------------------------------------------------------------
 #2-6. Famous Quote 2: Repeat Exercise 2-5, but this time store the famous person’s
 #name in a variable called famous_person. Then compose your message
 #and store it in a new variable called message. Print your message.
@@ -55,7 +55,7 @@ message='"A person who never made a mistake never tried anything new."'
 
 print(f'{famous_person} once said,{message}')
 
---------------------------------------------------------------------------------------
+#--------------------------------------------------------------------------------------
 #2-7. Stripping Names: Store a person’s name, and include some whitespace
 #characters at the beginning and end of the name. Make sure you use each
 #character combination, "\t" and "\n", at least once.
@@ -70,7 +70,7 @@ print (p_name.lstrip())
 print (p_name.rstrip())
 print (p_name.strip())
 
---------------------------------------------------------------------------------------
+#--------------------------------------------------------------------------------------
 #2-8. Number Eight: Write addition, subtraction, multiplication, and division
 #operations that each result in the number 8. Be sure to enclose your operations
 #in print statements to see the results. You should create four lines that look
@@ -84,7 +84,7 @@ print(11-3)
 print(4*2)
 print(24/3)
 
---------------------------------------------------------------------------------------
+#--------------------------------------------------------------------------------------
 #2-9. Favorite Number: Store your favorite number in a variable. Then, using
 #that variable, create a message that reveals your favorite number. Print that
 #message.
@@ -92,7 +92,7 @@ print(24/3)
 favourite_no=7
 print(f"Favourite_no is {favourite_no}")
 
---------------------------------------------------------------------------------------
+#--------------------------------------------------------------------------------------
 #2-10. Adding Comments: Choose two of the programs you’ve written, and
 #add at least one comment to each. If you don’t have anything specific to write
 #because your programs are too simple at this point, just add your name and
@@ -112,7 +112,7 @@ message = f"My favorite number is {favorite_number}."
 # Print the message
 print(message)
 
---------------------------------------------------------------------------------------
+#--------------------------------------------------------------------------------------
 #2-11. Zen of Python: Enter import this into a Python terminal session and skim
 #through the additional principles.
 
