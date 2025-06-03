@@ -1,0 +1,5 @@
+In Python you can store values in variables.
+In Python you can use loops to repeat tasks.
+In Python you can define functions to organize code.
+In Python you can read and write files.
+In Python you can handle errors using exceptions.
